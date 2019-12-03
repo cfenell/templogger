@@ -57,10 +57,17 @@ def plot_day():
                   'DEF:utemin=%s:ute:MIN' % db, 
                   'DEF:innemax=%s:inne:MAX' % db, 
                   'DEF:innemin=%s:inne:MIN' % db, 
-                  'LINE2:ute#0000FF:Ute', 'VDEF:utemaxnu=utemax,MAXIMUM', 'GPRINT:utemaxnu:Max %4.1lf', 
-                  'VDEF:uteminnu=utemin,MINIMUM', 'GPRINT:uteminnu:Min %4.1lf', 
-                  'LINE2:inne#00FF00:Inne', 'VDEF:innemaxnu=innemax,MAXIMUM', 'GPRINT:innemaxnu:Max %4.1lf',
-                  'VDEF:inneminnu=innemin,MINIMUM', 'GPRINT:inneminnu:Min %4.1lf')
+                  'LINE2:ute#0000FF:Ute', 
+                  'VDEF:uteminnu=utemin,MINIMUM',
+                  'GPRINT:uteminnu:Min %4.1lf',
+                  'VDEF:utemaxnu=utemax,MAXIMUM',
+                  'GPRINT:utemaxnu:Max %4.1lf',  
+                  'LINE2:inne#00FF00:Inne',
+                  'VDEF:inneminnu=innemin,MINIMUM',
+                  'GPRINT:inneminnu:Min %4.1lf',
+                  'VDEF:innemaxnu=innemax,MAXIMUM',
+                  'GPRINT:innemaxnu:Max %4.1lf')
+                 
 def plot_month():
     graph="/home/pi/var/sk2gj-temp-m.png"
     rrdtool.graph(graph, 
